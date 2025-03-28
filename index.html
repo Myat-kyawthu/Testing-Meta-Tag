@@ -4,102 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Primary Meta Tags -->
-    <title>John Doe & Jane Doe - Wedding Invitation</title>
-    <meta name="title" content="John Doe & Jane Doe - Wedding Invitation">
+    <title>Wedding Invitation Meta Card</title>
+    <!-- Primary Meta Tags (for SEO & Social Media) -->
+    <meta name="title" content="John Doe &amp; Jane Doe - Wedding Invitation">
     <meta name="description"
         content="Join us to celebrate the wedding of John Doe and Jane Doe at The Grand Hall, 123 Wedding Lane on December 25, 2025 at 5:00 PM.">
-
-    <!-- Open Graph / Facebook / Viber -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="John Doe & Jane Doe - Wedding Invitation">
+    <meta property="og:title" content="John Doe &amp; Jane Doe - Wedding Invitation">
     <meta property="og:description"
         content="Join us to celebrate the wedding of John Doe and Jane Doe at The Grand Hall, 123 Wedding Lane on December 25, 2025 at 5:00 PM.">
+    <!-- Note: Multiple images can be added by repeating the tag -->
     <meta property="og:image" content="groom.jpg">
+    <meta property="og:image" content="bride.jpg">
     <meta property="og:url" content="http://example.com">
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="John Doe & Jane Doe - Wedding Invitation">
+    <meta name="twitter:title" content="John Doe &amp; Jane Doe - Wedding Invitation">
     <meta name="twitter:description"
         content="Join us to celebrate the wedding of John Doe and Jane Doe at The Grand Hall, 123 Wedding Lane on December 25, 2025 at 5:00 PM.">
     <meta name="twitter:image" content="bride.jpg">
 
-    <!-- Custom CSS for a clean and minimalist style -->
+    <!-- Custom CSS for the meta card UI -->
     <style>
-        /* Base styles */
+        /* Base Reset & Body Styling */
         body {
             margin: 0;
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
 
-        .container {
+        /* Meta Card Container */
+        .meta-card {
             background-color: #fff;
-            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            width: 90%;
             max-width: 600px;
-            margin: 20px;
+            overflow: hidden;
         }
 
-        h1 {
-            margin-bottom: 10px;
-            font-size: 2em;
+        /* Header Section */
+        .meta-card header {
+            background-color: #eaeaea;
+            padding: 15px;
+            text-align: center;
         }
 
-        p {
+        .meta-card header h1 {
             margin: 0;
-            line-height: 1.5;
+            font-size: 1.8rem;
+            color: #333;
         }
 
-        /* Image styling */
-        .images {
+        /* Content Section */
+        .meta-card .meta-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .meta-card .meta-content p {
+            font-size: 1rem;
+            color: #555;
+            margin: 0 0 15px 0;
+        }
+
+        /* Image Section: Two Images Side by Side */
+        .meta-card .meta-images {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
+            gap: 10px;
+            padding: 0 20px 20px;
         }
 
-        .images img {
-            width: 300px;
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transition: transform 0.2s ease-in-out;
+        .meta-card .meta-images img {
+            width: 48%;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
         }
 
-        .images img:hover {
+        .meta-card .meta-images img:hover {
             transform: scale(1.05);
         }
 
-        /* Responsive adjustments */
+        /* Responsive Adjustments */
         @media (max-width: 600px) {
-            .container {
-                padding: 15px;
+            .meta-card .meta-images {
+                flex-direction: column;
             }
 
-            .images {
-                flex-direction: column;
+            .meta-card .meta-images img {
+                width: 100%;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>John Doe &amp; Jane Doe</h1>
-        <p>You are invited to our wedding celebration at The Grand Hall, 123 Wedding Lane on December 25, 2025 at 5:00
-            PM.</p>
-        <div class="images">
-            <img src="groom.jpg" alt="Groom">
-            <img src="bride.jpg" alt="Bride">
+    <div class="meta-card">
+        <header>
+            <h1>John Doe &amp; Jane Doe</h1>
+        </header>
+        <div class="meta-content">
+            <p>You are invited to our wedding celebration at The Grand Hall, 123 Wedding Lane on December 25, 2025 at
+                5:00 PM.</p>
+            <div class="meta-images">
+                <img src="groom.jpg" alt="Groom Image">
+                <img src="bride.jpg" alt="Bride Image">
+            </div>
         </div>
     </div>
 </body>
